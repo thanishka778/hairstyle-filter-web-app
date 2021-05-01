@@ -2,7 +2,7 @@ noseX=0;
 noseY=0;
 
 function preload(){
-clownNose=loadImage('https://i.postimg.cc/vH31DbrJ/hairstyle.png');
+clownNose=loadImage('https://i.postimg.cc/pL6mcTzd/hat.png');
 }
 
 function setup(){
@@ -17,12 +17,12 @@ function setup(){
 
 function draw(){
 image(video, 0, 0, 350, 350 );
-image(clownNose, noseX, noseY, 250, 250);
+image(clownNose, noseX, noseY, 150, 150);
 
 }
 
 function take_snapshot(){
-    save("Hair style filter.png");
+    save("Magician hat filter.png");
 }
 
 function model_loaded(){
@@ -32,8 +32,8 @@ function model_loaded(){
 function gotPoses(results){
     if(results.length > 0){
         console.log(results);
-        noseX=results[0].pose.nose.x-250;
-        noseY=results[0].pose.nose.y-200;
+        noseX=results[0].pose.nose.x-230;
+        noseY=results[0].pose.nose.y-280;
         console.log("noseX= "+ noseX)
         console.log("noseY= "+ noseY)
     }
